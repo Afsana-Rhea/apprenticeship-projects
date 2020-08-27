@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--
+   Name: Afsana Miji
+   Date Created: 09.27.19
+   Most recent revision:
+-->
+<html lang="en">
+   <head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <title>Contact Us</title>
+     <link href="https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+     <link href="restaurantStyles.css" rel="stylesheet" type="text/css" />
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <script type="text/JavaScript" src="contact.js"></script>
+    <link href="restaurantStyles.css" rel="stylesheet" type="text/css" />
+     </script>
+     <noscript>
+       Please be aware this site is better viewed with Javascript enabled ;)
+     </noscript>
+
+
+ </head>
+ <body>
+     <header class="jumbotron">
+       <h1><center>Jupiter's 4th Moon Bistro</h1>
+         </header>
+       <hr>
+       <div class="container">
+         <nav>
+         <div class="row">
+
+         <div class="col-sm-4 col-12"><center>
+       <a class="btn badge-pill" href="homepagecss.html" style="color: #FBA26B;"><i class="fas fa-home"></i>Home</a>
+</div>
+<div class="col-sm-4 col-12"><center>
+       <a class="btn badge-pill" href="menucss.html" style="color: #FBA26B;"><i class="fas fa-utensils"></i>Menu</a>
+</div>
+<div class="col-sm-4 col-12"><center>
+     <a class="btn badge-pill"href="contactcss.html" style="color: #FBA26B;"><i class="fas fa-paper-plane"></i>Contact</a>
+</div>
+
+     </div>
+   </nav>
+     </div>
+   </div>
+       <hr>
+<div class="wrapper">
+
+  <div id="error_message"></div>
+       <form action="submit.html" onsubmit="return validateItems();" method="POST">
+
+         <center><label FOR="name">Name:</label>
+           <input type="text" id="name" name="name"><br />
+           <br>
+           <label for="email">Email:</label>
+           <input type="text" id="email" name="email"> <br />
+           <br>
+           <label for="phone">Phone:</label>
+           <input type="text" id="phone" name="phone"> <br />
+           <br>
+
+<label for="contact"> Reason for Inquiry:</label>
+           <select id="contact" name="contact">
+             <option value="catering" selected>--Catering--</option>
+
+               <option value="feedback">Feedback</option>
+               <option value="private party">Private Party</option>
+               <option value="other">Other</option>
+               </select>
+               <br />
+               <label for="info">Additional Information</label>
+               <textarea id="info" name="info">
+               </textarea>
+               <br />
+
+<br>
+Have You Been To The Restaurant?
+<input type="radio" id="choice1" name="answer" value="no"> No
+<input type="radio" id="choice2" name="answer" value="yes"> Yes
+
+
+<br>
+
+                 <br>
+Best Days To Contact You:
+<input type="checkbox" id="monday" name="contact" value="M">
+<label for="monday">M</label>
+<input type="checkbox" id="tuesday" name="contact" value="T">
+ <label for="tuesday">T</label>
+ <input type="checkbox" id="wednesday" name="contact" value="W">
+ <label for="wednesday">W</label>
+ <input type="checkbox" id="thursday" name="contact" value="Th">
+  <label for="thursday">Th</label>
+  <input type="checkbox" id="friday" name="contact" value="F">
+   <label for="friday">F</label>
+
+ <br>
+ <button style="background-color: #FBA26B; color: white;" "type="submit" id="submitButton" class="btn btn-default">Submit Request</button>
+
+
+</form>
+</div>
+
+       <footer>
+         <center>
+         <hr>
+         <p><i class="fas fa-map-pin"></i>
+ Black Trumpet Way, Io, Jupiter, Milky Way
+
+ </p>
+ <p><i class="fas fa-satellite-dish"></i>
+ 1-800-Dial-Io
+ </p>
+       </footer>
+       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+   </body>
+</html>

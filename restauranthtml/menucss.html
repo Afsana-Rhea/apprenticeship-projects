@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!--
+   Name: Afsana Miji
+   Date Created: 09.27.19
+   Most recent revision:
+-->
+<html lang="en">
+   <head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device=width, initial-scale=1, shrink-to-fit=no">
+       <title>Menu</title>
+       <link href="https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap" rel="stylesheet">
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+         <link href="restaurantStyles.css" rel="stylesheet" type="text/css" />
+         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+         <script type="text/javascript">
+         </script>
+         <noscript>
+           Please be aware this site is better viewed with Javascript enabled ;)
+         </noscript>
+       <style>
+       table, th, td{
+
+       padding: 5px 10px;
+       }
+       th{
+font-size: 1.2em;
+       }
+       table.center {
+margin-left:auto;
+margin-right:auto;
+       }
+       .mySlides {
+         display:none;
+       }
+       </style>
+
+   </head>
+   <body>
+        <header class="jumbotron">
+         <h1><center>Jupiter's 4th Moon Bistro</h1>
+        </header>
+         <hr/>
+         <div class="container">
+           <nav>
+           <div class="row">
+
+           <div class="col-sm-4 col-12"><center>
+         <a class="btn badge-pill" href="homepagecss.html" style="color: #FBA26B;"><i class="fas fa-home"></i>Home</a>
+</div>
+<div class="col-sm-4 col-12"><center>
+         <a class="btn badge-pill" href="menucss.html" style="color: #FBA26B;"><i class="fas fa-utensils"></i>Menu</a>
+</div>
+<div class="col-sm-4 col-12"><center>
+       <a class="btn badge-pill" href="contactcss.html" style="color: #FBA26B;"><i class="fas fa-paper-plane"></i>Contact</a>
+</div>
+
+       </div>
+     </nav>
+       </div>
+     </div>
+         <hr/>
+         <h2 class="w3-center"></h2>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="Chanterelle.jpg" style="width:100%">
+  <img class="mySlides" src="tinybolete.jpg" style="width:100%">
+  <img class="mySlides" src="picked.jpeg" style="width:100%">
+  <img class="mySlides" src="bolete.jpg" style="width:100%">
+<img class="mySlides" src="morel.jpg" style="width:100%">
+<img class="mySlides" src="morel2.jpg" style="width:100%">
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+
+         <h2 style= "color: #FBA26B;"><center><i class="fas fa-hamburger"></i> Menu</h2>
+           <br>
+
+<div class="container">
+           <div class = "row">
+             <div class ="col-sm-12 col-md-4">
+           <h6><b>Venusian Chantarelle Risotto</b></h6>
+           <p> The Venusian Chanterelles are are handpicked by Libras and Tauruses on Venus, after which they are slow cooked for 4 hours with fragrant jasmine rice and saffron. Creamy and delicate.
+           </p>
+           <p class="menu">57 Cowrie Shells</p>
+             </div>
+             <div class ="col-sm-12 col-md-4">
+           <h6><b>Milky Way Morel MeatBall</b></h6>
+           <p> The Milky Way Morel only makes its appearance once every moon cycle in spring, so what treat! Breaded and deep fried like you would a traditional Italian meatball, you cannot go wrong.
+           </p>
+           <p class="menu">39 Cowrie Shells</p>
+             </div>
+             <div class ="col-sm-12 col-md-4">
+           <h6><b>Rings of Saturn Truffle Tartar</b></h6>
+           <p> Traditional Truffles were hunted by wild boar in France, but this rare delicacy gives off its unique and pungent aroma before dawn, when it is easiest to smell by human foragers. Served crudo, dressed in olive oil and yuzu.
+           </p>
+           <p class="menu">99 Cowrie Shells</p>
+         </div>
+           </div>
+              <div class = "row">
+              <div class ="col-sm-12 col-md-4">
+              <h6><b>Mercurian Bolete Pizza</b></h6>
+              <p> A thin crust pizza in the Italian style with mozzarella and ricotta,  hand picked Bolete mushrooms from Mercury, topped with roasted garlic and chili oil.
+              </p>
+              <p class="menu">57 Cowrie Shells</p>
+              </div>
+              <div class ="col-sm-12 col-md-4">
+              <h6><b>Martian Oyster Caviar</b></h6>
+              <p> Oyster Mushrooms from Mars in the traditional style of Beluga Caviar, served with chopped shallots and toast.
+              </p>
+              <p class="menu">39 Cowrie Shells</p>
+              </div>
+              <div class ="col-sm-12 col-md-4">
+              <h6><b>Plutonion Crimini Full English</b></h6>
+              <p> Reminiscent of the tradition Old English style breakfast, pan fried criminis from Pluto in butter, heirloom tomatoes from our greenhouse, good old Heinz baked beans and a few Beyond Meat Brats to round out the plate. Nom.
+              </p>
+              <p class="menu">99 Cowrie Shells</p>
+              </div>
+
+              </div>
+
+           </div>
+<table class="center" id="drinks">
+
+  <tr>
+    <th><center style="padding-left: 150px"><i class="fas fa-beer"></i> Beverages</th>
+    <th></th>
+  </tr>
+  <tr>
+    <td> Signature Drops of Jupiter IPA</td>
+    <td style="font-weight: bold"> 6 Cowrie Shells</td>
+  </tr>
+  <tr>
+    <td>Non-Alcoholic SDJ IPA</td>
+    <td style="font-weight: bold"> 4 Cowrie Shells</td>
+  </tr>
+  <tr>
+    <td>The Great Red Spot Pilsner</td>
+    <td style="font-weight: bold"> 5 Cowrie Shells</td>
+  </tr>
+  <tr>
+    <td>Neptunian Slush</td>
+    <td style="font-weight: bold"> 5 Cowrie Shells</td>
+  </tr>
+</table>
+
+
+
+       <nav>
+       </nav>
+       <footer>
+         <center>
+         <hr>
+         <p><i class="fas fa-map-pin"></i>
+Black Trumpet Way, Io, Jupiter, Milky Way
+
+</p>
+<p><i class="fas fa-satellite-dish"></i>
+ 1-800-Dial-Io
+</p>
+       </footer>
+       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+   </body>
+</html>

@@ -1,0 +1,80 @@
+body {
+background-color: #ebfafa;
+font-family: arial, helvetica, sans-serif;
+color: #145252;
+max-width: 900px;
+margin:0 auto;
+}
+
+.jumbotron, footer {
+background-image: url("galaxy.png");
+color: #fef9ff;
+font-family: 'Saira Stencil One', cursive;
+
+}
+
+nav a{
+  background-color: #145252;
+  color: #FBA26B;
+  padding: 8px;
+  border: thin solid #0d1f2d;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  margin: 20px;
+  width: 100px;
+  text-decoration: underline;
+}
+nav a:visited {
+  color: #FFD700;
+}
+nav a:hover {
+  font-weight: bold;
+  background-color: #ebfafa;
+  color: #5b7d87
+
+}
+nav a:active {
+color: #FF69B4;
+}
+
+#carouselGifSlider {
+  padding: 50px 20px;
+}
+
+.d-block {
+width: 50%;
+
+}
+
+.wrapper #error_message {
+  margin-bottom: 20px;
+  padding: 0px;
+  background: #FBA26B;
+  text-align: center;
+  font-size: 14px;
+  transition:all 0.5s ease;
+}
+
+#drinks td, #drinks th {
+border: 1px solid #ddd;
+padding: 8px;
+
+}
+
+#drinks tr:nth-child(odd){
+  background-color: #FBA26B;
+  color: white;
+}
+
+h6 {
+color: #FBA26B;
+
+}
+
+.menu {
+color: #FBA26B;
+}
+
+
+/*add footer, header, jumbotron, background*/

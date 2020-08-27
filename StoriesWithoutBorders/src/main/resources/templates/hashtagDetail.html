@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en"  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+                <!-- Bootstrap CSS -->
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+                    <title>Stories Without Borders</title>
+                    </head>
+                    <body style="background-color: #f6f6ee;">
+                        <div class="container">
+                            <div class="container">
+                                <div class="jumbotron" style="background-image: url(https://www.ies.sas.ac.uk/sites/default/files/banners/Virginia%20Woolf%20Banner_0_0.png); background-size: auto 100%;">
+                                    <div class="row m-4">
+                                        <div class="col text-left" >
+                                            <h1 style="color:#993300; font-family: Georgia;">Stories Without Borders</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-4 border border-dark">
+
+                                <div class="dropdown col text-center m-2" >
+                                    <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" >Pages
+                                        <span class="caret"></span></button>
+                                    <ul class="dropdown-menu" style = "background-color: #f6f6ee;">
+                                        <li><a href="project" style="color:#8a8a5c">Home</a></li>
+                                        <li><a href="posts" style="color:#8a8a5c">Posts</a></li>
+                                        <li><a href="categories" style="color:#8a8a5c">Categories</a></li>
+                                        <li><a href="hashtags" style="color:#8a8a5c">Hashtags</a></li>
+                                        <li sec:authorize="hasRole('ROLE_ADMIN')"><a href="administrator" style="color:#8a8a5c">Administrator</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown col text-center m-2">
+                                    <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" >About Us
+                                        <span class="caret"></span></button>
+                                    <ul class="dropdown-menu" style = "background-color: #f6f6ee;">
+                                        <li th:each="post : ${staticPosts}">
+                                            <a href="#" th:href="@{/postDetail(id=${post.id})}" th:text='${post.title}' style="color:#8a8a5c">Title</a>
+
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                                <div class="col text-center m-2">
+                                    <a href="login" class="btn btn-outline-secondary btn-lg">Login</a>
+                                </div>
+
+
+                                <div sec:authorize="isAuthenticated()">
+                                    <form class="form-inline" 
+                                          method="POST" 
+                                          action="/logout">
+                                        <input type="hidden" 
+                                               th:name="${_csrf.parameterName}" 
+                                               th:value="${_csrf.token}"/>
+                                        <label for="submit">
+                                            Hello : <span th:text="${#authentication.name}">
+                                            </span>&nbsp;&nbsp;&nbsp;|
+                                        </label>
+                                        <button class="btn btn-link" 
+                                                id="submit" 
+                                                type="submit" style="color:#8a8a5c">Logout</button>
+                                    </form>
+                                </div>
+
+                                <!--                                <div class="col text-center m-2" sec:authorize="hasRole('ROLE_ADMIN')">
+                                                                    <a href="administrator" class="btn btn-outline-secondary btn-lg">Administrator</a>
+                                                                </div>-->
+                                <!--                                <div th:each="post : ${staticPosts}" class="col text-center m-2">
+                                                                    <a href="#" th:href="@{/postDetail(id=${post.id})}"  class="btn btn-outline-secondary btn-lg" th:text='${post.title}'>Title</a>
+                                
+                                                                </div>-->
+
+
+
+                            </div>
+                            <div><center> <h2 style="color:#e60000">Hashtag</h2></center></div>
+                            <div class = "row m-4 border border-dark">
+                                <div class ="col-6 text-right"><strong>Hashtag: </strong></div>
+                                <div class ="col-6 text-left">
+                                    <span th:text="${hashtag.name}">display name</span>
+                                </div>
+                                <div class="col-6 text-right"><strong>Posts for this Hashtag: </strong></div>
+                                <div class="col-6 text-left">
+                                    <span th:each="post : ${hashtag.posts}">
+                                        <span><a href="#" th:href="@{/postDetail(id=${post.id})}" th:text='${post.title}' style="color:#6b6b47">
+                                                display posts</a></span><br/>
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div> 
+
+
+                        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+                        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+                    </body>
+                    </html>
