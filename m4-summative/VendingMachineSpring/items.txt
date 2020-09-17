@@ -1,0 +1,4 @@
+A1::Snickers::1.75::3
+A2::Twix::1.25::2
+A3::Mars::1.5::-1
+B1::Twizzlers::2.0::11

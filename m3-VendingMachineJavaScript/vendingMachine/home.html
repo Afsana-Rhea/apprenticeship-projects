@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vending Machine</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="row" id="items">
+                    <div class="col-md-4">
+                        <div class="item">
+                            <h3>Snickers</h3>
+                            <h4>$1.75</h4>
+                            <h5>QTY: 9</h5>
+                            <button class="btn btn-danger btnSelect" data-itemId='1'>Select</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-3">
+                <form action="" method="post" id="frmVending">
+                    <form class="form-horizontal">
+                        <fieldset>
+
+                            <!-- Form Name -->
+                            <legend>Vending Machine</legend>
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="textinput">Balance:</label>
+                                <div class="col-md-8">
+                                    <input id="txtBalance" readonly name="txtBalance" type="text" 
+                                        class="form-control input-md">
+                                </div>
+                            </div>
+
+                            <!-- Button (Double) -->
+                            <div class="form-group">
+                                <div class="col-md-8 ">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-success btnAddChange" data-amount='1.00'>1.00</button>
+                                        <button type="button" class="btn btn-success btnAddChange" data-amount='.25'>.25</button>
+                                        <button type="button" class="btn btn-success btnAddChange" data-amount='.10'>.10</button>
+                                        <button type="button" class="btn btn-success btnAddChange" data-amount='.05'>.05</button>
+                                    </div>
+                                </div>
+                            </div>
+<hr/>
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="textinput">Item Selection</label>
+                                <div class="col-md-8">
+                                    <input id="txtItemId" name="txtItemId" type="text" 
+                                        class="form-control input-md">
+                                </div>
+                            </div>
+
+                            <!-- Button -->
+                            <div class="form-group">
+                                <div class="col-md-8 offset-md-2">
+                                    <button id="btnVendItem" name="btnVendItem"
+                                        class="btn btn-primary">Vend Item</button>
+                                </div>
+                            </div>
+                            <hr/>
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="txtMessage">Message:</label>
+                                <div class="col-md-8">
+                                    <input id="txtMessage" readonly name="txtMessage" type="text" 
+                                        class="form-control input-md">
+                                </div>
+                            </div>
+
+                            <!-- Button -->
+                            <div class="form-group">
+                                <div class="col-md-4 offset-md-2">
+                                    <button id="btnReturnChange" name="btnReturnChange"
+                                        class="btn btn-secondary">Return Change</button>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </form>
+
+
+                </form>
+            </div> <!-- Form Data-->
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
+        integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm"
+        crossorigin="anonymous"></script>
+    <script src="./js/dataService.js"></script>
+    <!-- <script src="./js/dataService.mock.js"></script> -->
+    <script src="./js/home.js"></script>
+</body>
+
+</html>

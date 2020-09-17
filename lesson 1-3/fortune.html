@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html>
+   <head>
+       <title>The Horoscopers</title>
+       <link rel="stylesheet" type="text/css" href="groupGameProject.css">
+   </head>
+   <body>
+       <div id="box">
+           <img src="https://media.giphy.com/media/l4FGotluxqU8KSen6/giphy.gif(2 MB)
+https://media.giphy.com/media/l4FGotluxqU8KSen6/giphy.gif
+">
+           <h2>The Horoscopers</h2>
+           <input id="user-input" type="input">
+           <input id="button" type="button" value="submit" onclick="response()">
+           <p id="response"></p>
+       </div>
+       <script>
+       function response() {
+           var list = [
+               "Mike Cantos is",
+               "Shavana Davis is",
+               "Ryan Mohar is",
+               "Gabby is",
+               "Jedika is",
+               "Danielle Polk is"
+           ];
+           var number = Math.floor(Math.random()*5);
+           document.getElementById("response").innerHTML = list[number];
+       }
+       </script>
+   </body>
+</html>
+
+* {
+   margin: 0;
+   padding: 0;
+}
+body {
+   background-image: url(Images/bg.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+#box {
+   position: absolute;
+   width: 400px;
+   height: 500px;
+   top: 20%;
+   left: 35%;
+   background: -webkit-linear-gradient(top, #6d0019 0%,#a50321 51%,#6d0019 100%);
+   border-radius: 50px;
+   box-shadow: 2px 2px 1px 1px #333;
+}
+#box img {
+   position: relative;
+   width: 250px;
+   height: 300px;
+   top: 20px;
+   left: 70px;
+}
+#box h2 {
+   position: relative;
+   top: 40px;
+   text-align: center;
+   font-size: 1.7rem;
+   color: white;
+   text-shadow: 2px 2px 4px #000000;
+}
+#box input {
+   position: relative;
+   top: 70px;
+   left: 65px;
+   font-size: 17px;
+}
+#box p {
+   position: relative;
+   text-align: center;
+   top: 80px;
+   color: white;
+   text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+   font-size: 20px;
+}
+input[type=button] {
+   background-color: #008CBA;
+   color: #fff;
+   box-sizing: border-box;
+   text-transform: capitalize;
+   border-radius: 5px;
+   border-style: none;
+   padding: 3px;
+   box-shadow: 2px 2px 1px 1px #333;
+}
