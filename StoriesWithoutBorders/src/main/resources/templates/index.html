@@ -8,46 +8,50 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-        <title>Afsana Miji</title>
+        <title>Stories Without Borders</title>
     </head>
-    <body style="background-color: #FFF5EE;">
-        <div class="container">
-            <div class="jumbotron" style="background-image: url(https://www.ies.sas.ac.uk/sites/default/files/banners/Virginia%20Woolf%20Banner_0_0.png); background-size: auto 100%;">
-                <div class="row m-4">
-                    <div class="col text-left">
-                        <h1 style="color:#993300; font-family: Georgia;">Afsana Miji</h1>
+    <body style="background-color: #f6f6ee;">
+        
+            <div class="container">
+                <div class="jumbotron" style="background-image: url(https://lithub.com/wp-content/uploads/2017/06/VW-Monks-House.jpg); background-size: 100%;">
+                    <div class="row m-4">
+                        <div class="col text-left" >
+                            <h1 style="color:#993300; font-family: Georgia;">Stories Without Borders</h1>
+                        </div>
                     </div>
                 </div>
             </div>
-            </div> 
-            <div class="container">
-                <div class="row">
-                <div class="col text-center m-4">
-                    <a href="https://www.linkedin.com/in/afsanamiji" target="_blank" class="btn btn-outline-secondary btn-lg"><img src="https://www.jta.org/wp-content/uploads/2016/12/simone-960x600.jpg" alt="simone and jean-paul" style="width:200px; height:200px; object-fit:cover;"><div>LinkedIn</div></a>
-                </div>
-                
-                <div class="col text-center m-4">
-                    <a href="project" target="_blank" class="btn btn-outline-secondary btn-lg"><img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/The_Bront%C3%AB_Sisters_by_Patrick_Branwell_Bront%C3%AB_restored.jpg" alt="virginia" style="width:200px; height:200px; object-fit:cover;"><div>Blog Site Project</div></a>
-                </div>
-                
-                 <div class="col text-center m-4">
-                    <a href="https://github.com/Afsana-Rhea" target="_blank" class="btn btn-outline-secondary btn-lg"><img src="https://pbs.twimg.com/media/BX81a87CUAEv2Kd.jpg" alt="come as your madness" style="width:200px; height:200px; object-fit:cover;"><div>GitHub</div></a>
-                </div>
-                </div>
-                
-                <!--                                <div class="dropdown col text-center m-2">
-                                                    <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" >About Us
-                                                        <span class="caret"></span></button>
-                                                    <ul class="dropdown-menu" style = "background-color: #f6f6ee;">
-                                                        <li th:each="post : ${staticPosts}">
-                                                            <a href="#" th:href="@{/postDetail(id=${post.id})}" th:text='${post.title}' style="color:#8a8a5c">Title</a>
-                
-                                                        </li>
-                
-                                                    </ul>
-                                                </div>-->
+        <div class="container">
+            <div class="row m-4 border border-dark">
 
-              
+                <div class="dropdown col text-center m-2" >
+                    <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" >Pages
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu" style = "background-color: #f6f6ee;">
+                        <li><a href="/" style="color:#8a8a5c">Home</a></li>
+                        <li><a href="posts" style="color:#8a8a5c">Posts</a></li>
+                        <li><a href="categories" style="color:#8a8a5c">Categories</a></li>
+                        <li><a href="hashtags" style="color:#8a8a5c">Hashtags</a></li>
+                        <li ><a href="administrator" style="color:#8a8a5c">Administrator</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown col text-center m-2">
+                    <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" >About Us
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu" style = "background-color: #f6f6ee;">
+                        <li th:each="post : ${staticPosts}">
+                            <a href="#" th:href="@{/postDetail(id=${post.id})}" th:text='${post.title}' style="color:#8a8a5c">Title</a>
+
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="col text-center m-2">
+                    <a href="login" class="btn btn-outline-secondary btn-lg">Login</a>
+                </div>
+
+
                 <div sec:authorize="isAuthenticated()">
                     <form class="form-inline" 
                           method="POST" 
@@ -56,7 +60,7 @@
                                th:name="${_csrf.parameterName}" 
                                th:value="${_csrf.token}"/>
                         <label for="submit">
-                            Hello : <span th:text="${#authentication.name}">
+                            Hello :  <span th:text="${#authentication.name}">
                             </span>&nbsp;&nbsp;&nbsp;|
                         </label>
                         <button class="btn btn-link" 
@@ -77,12 +81,14 @@
 
             </div>
 
-            <!--            <center> <img style='height: 100%; width: 100%; object-fit: contain' src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/79029951_10156593648037385_8501489670503268352_n.jpg?_nc_cat=102&_nc_sid=6e5ad9&_nc_ohc=U3khPn_grVIAX91MUwU&_nc_ht=scontent-lga3-1.xx&oh=5509499d14aa4c0388513e0f3c75beaf&oe=5EC58656">
-                        </center>-->
-            <!--            <div class="col text-center m-2">
-                            <a href="https://www.doctorswithoutborders.org/support-us" target="_blank" class="btn btn-outline-danger btn-lg">Support Us</a>
-                        </div>-->
-        
+            <div class ="container">
+            <center> <img style='height: 100%; width: 100%; object-fit: contain' src="https://thespinoff.co.nz/wp-content/uploads/2017/02/GettyImages-97344659-850x510.jpg">
+                <div class="top-left"> To gain your own voice, you have to forget about having it heard.” — Allen Ginsberg</div>
+            </center>
+                
+               
+            </div>
+        </div> 
 
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
